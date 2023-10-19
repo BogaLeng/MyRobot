@@ -5,6 +5,7 @@ public class DisHealthByContact : MonoBehaviour
     public Slider HP;
     public void OnTriggerEnter()
     {
-        HP.value -= 0.1f;
+        if(HP.value>0&&!AutoAttack.isInvincibility)
+            HP.value -= 0.1f;
     }
 }
